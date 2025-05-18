@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Construção Civil - Upload de Dados</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="bg-dark text-white text-center py-4">
+    <h1>Gestão de Obras</h1>
+    <p>Envie os arquivos CSV para alimentar os dados da construção</p>
+  </header>
+
+  <!-- Corpo do Site -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12">
+        <div class="card shadow rounded border-0">
+          <div class="card-body">
+            <h4 class="text-center text-dark mb-4">Envio de Arquivos CSV</h4>
+            <form id="uploadForm">
+              <div class="mb-3">
+                <label for="csvFile" class="form-label">Escolha o arquivo CSV</label>
+                <input class="form-control form-control-lg" type="file" id="csvFile" accept=".csv" required>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-warning text-white rounded-pill">Enviar</button>
+              </div>
+            </form>
+            <div id="result" class="mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Gestão de Obras - Todos os Direitos Reservados a PRINTWEBTECNOLOGIA</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript para upload de CSV -->
+  <script src="script.js"></script>
+</body>
+</html>

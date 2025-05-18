@@ -15,9 +15,9 @@ Este projeto é uma plataforma educativa e colaborativa voltada para estudantes 
 ## Como colaborar
 
 Se você deseja participar dos nossos projetos colaborativos:
-- Acesse nossos repositórios no [GitHub](#) (insira o link aqui)
+- Acesse meus repositórios no [GitHub]
 - Participe das discussões e envie seus pull requests
-- Inscreva-se nos nossos encontros e mentorias online
+
 
 ---
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portal de Engenharia e Pesquisa</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f0f4f8; }
+  header { background:#222; color:#fff; text-align:center; padding:20px; }
+  header h1 { margin: 0; }
+  nav { background:#004488; display:flex; justify-content: center; gap: 20px; padding: 10px 0; }
+  nav a { color:#fff; text-decoration:none; font-weight: bold; padding: 8px 12px; border-radius: 4px; }
+  nav a:hover { background:#0077cc; }
+  section { max-width: 1000px; margin: 20px auto; padding: 20px; background:#fff; border-radius:8px; }
+  h2 { color:#004488; margin-top: 0; }
+  footer { background:#222; color:#ccc; text-align:center; padding:10px; margin-top:40px; font-size:14px; }
+  /* Estilo para artigos, ideias e projetos colaborativos */
+  .card { border: 1px solid #ccc; border-radius: 8px; padding:15px; margin-bottom:15px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
+  .card h3 { margin-top: 0; color:#0077cc; }
+  .button { display:inline-block; padding:8px 12px; background:#0077cc; color:#fff; border-radius:4px; text-decoration:none; font-weight:bold; }
+  .button:hover { background:#005fa3; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Portal de Engenharia e Pesquisa</h1>
+<p>Inovação, sustentabilidade e colaboração em um só lugar</p>
+</header>
+
+<nav>
+<a href="#artigos">Artigos Científicos</a>
+<a href="#ideias">Ideias de Pesquisas Sustentáveis</a>
+<a href="#colabore">Código Open Source Colaborativo</a>
+</nav>
+
+<!-- Seção Artigos Científicos -->
+<section id="artigos">
+<h2>Artigos Científicos</h2>
+<div class="card">
+<h3>Como a energia solar pode transformar comunidades</h3>
+<p>Resumo: Este artigo discute o potencial da energia solar para comunidades isoladas, promovendo sustentabilidade e autonomia energética.</p>
+<a class="button" href="#">Ler mais</a>
+</div>
+<div class="card">
+<h3>Técnicas inovadoras para reciclagem de plásticos</h3>
+<p>Resumo: Exploramos novas tecnologias que melhoram a eficiência da reciclagem de plásticos, ajudando a combater a poluição.</p>
+<a class="button" href="#">Ler mais</a>
+</div>
+<!-- Você pode adicionar aqui mais artigos dinamicamente no futuro -->
+</section>
+
+<!-- Seção Ideias de Pesquisas Sustentáveis -->
+<section id="ideias">
+<h2>Ideias de Pesquisas Sustentáveis</h2>
+<div class="card">
+<h3>Energia renovável a partir de biomassa</h3>
+<p>Proposta: Desenvolver métodos eficientes para converter resíduos orgânicos em energia limpa.</p>
+</div>
+<div class="card">
+<h3>Reuso de água na agricultura urbana</h3>
+<p>Ideia: Criar sistemas acessíveis para reutilizar água em hortas urbanas, promovendo a sustentabilidade.</p>
+</div>
+<!-- Adicione suas ideias aqui -->
+</section>
+<!-- Seção Código Open Source Colaborativo -->
+<section id="colabore">
+  <h2>Código Open Source e Projetos Colaborativos</h2>
+  <p>Participe de projetos reais com estudantes e profissionais ao redor do mundo. Junte-se à nossa comunidade para desenvolver soluções inovadoras em tempo real.</p>
+  
+  <div class="card">
+    <h3>Projeto Sensor de Energia Solar</h3>
+    <p>Desenvolvimento de um sistema de monitoramento de painéis solares em tempo real. Contribua com código, ideias ou testes.</p>
+    <a class="button" href="#">Participe do projeto</a>
+  </div>
+  
+  <div class="card">
+    <h3>Sistema de Irrigação Inteligente</h3>
+    <p>Automatização de irrigação usando IoT, sensores de umidade e coleta de dados colaborativa.</p>
+    <a class="button" href="#">Veja mais</a>
+  </div>
+  
+  <p>Quer colaborar? Acesse nossos repositórios no <a href="#" target="_blank">GitHub</a> ou participe de encontros online para discutir ideias.</p>
+</section>

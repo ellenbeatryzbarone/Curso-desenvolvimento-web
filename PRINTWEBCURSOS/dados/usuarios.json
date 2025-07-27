@@ -1,0 +1,4 @@
+[
+  { "nome": "aluno01", "senha": "123456", "tipo": "aluno" },
+  { "nome": "prof01", "senha": "654321", "tipo": "educador" }
+]

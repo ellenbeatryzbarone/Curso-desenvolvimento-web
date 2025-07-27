@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel do Aluno | PRINTWEBCURSOS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .glow-button {
+      box-shadow: 0 0 8px #5b21b6, 0 0 16px #5b21b6;
+    }
+
+    .curso-container:hover {
+      transform: scale(1.03);
+      transition: 0.3s;
+    }
+
+    .curso-container:hover .glow-button {
+      box-shadow: 0 0 10px #5b21b6, 0 0 20px #5b21b6;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-indigo-900 to-purple-900 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 shadow-lg glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+      <h1 class="text-3xl font-extrabold">⚡ PRINTWEBCURSOS</h1>
+      <nav class="flex flex-wrap space-x-4 text-sm md:text-base mt-2 md:mt-0">
+        <a href="../index.html" class="hover:text-cyan-400 transition">🏠 Home</a>
+        <button onclick="alert('Contato: (81) 98557-0450')" class="hover:text-cyan-400 transition">📞 Contato</button>
+        <button onclick="abrirEmail()" class="hover:text-cyan-400 transition">📧 Empresas</button>
+        <a href="cursos.html" class="hover:text-cyan-400 transition">💼 Cursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 pt-20">
+    <h1 class="text-4xl font-bold mb-2">🎓 Bem-vindo, Aluno!</h1>
+    <p class="text-lg text-gray-200 mb-10">Explore os cursos tecnológicos e conteúdos futuristas abaixo:</p>
+
+    <!-- Cursos -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">📚 Cursos Disponíveis</h2>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="curso-container glass rounded-xl p-5 text-white">
+          <div class="text-5xl mb-3">📘</div>
+          <h3 class="text-xl font-bold mb-2">SQL Avançado</h3>
+          <p class="text-sm mb-4">Domine queries e otimização de banco de dados.</p>
+          <button class="w-full glow-button bg-indigo-600 hover:bg-indigo-700 py-2 rounded-md font-semibold">ACESSAR</button>
+        </div>
+        <div class="curso-container glass rounded-xl p-5 text-white">
+          <div class="text-5xl mb-3">🤖</div>
+          <h3 class="text-xl font-bold mb-2">Inteligência Artificial</h3>
+          <p class="text-sm mb-4">Aprenda IA, redes neurais e modelos preditivos.</p>
+          <button class="w-full glow-button bg-indigo-600 hover:bg-indigo-700 py-2 rounded-md font-semibold">ACESSAR</button>
+        </div>
+        <div class="curso-container glass rounded-xl p-5 text-white">
+          <div class="text-5xl mb-3">💻</div>
+          <h3 class="text-xl font-bold mb-2">PHP do Zero</h3>
+          <p class="text-sm mb-4">Crie sistemas web com PHP moderno e seguro.</p>
+          <button class="w-full glow-button bg-indigo-600 hover:bg-indigo-700 py-2 rounded-md font-semibold">ACESSAR</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materiais -->
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold mb-4">📄 Materiais para Estudos</h2>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="curso-container glass rounded-xl p-5 text-white">
+          <div class="text-5xl mb-3 text-purple-400">📄</div>
+          <h3 class="text-xl font-bold mb-2">SQL Cheatsheet</h3>
+          <p class="text-sm mb-4">Resumo rápido de comandos SQL essenciais.</p>
+          <button class="w-full glow-button bg-purple-600 hover:bg-purple-700 py-2 rounded-md font-semibold">VER PDF</button>
+        </div>
+        <div class="curso-container glass rounded-xl p-5 text-white">
+          <div class="text-5xl mb-3 text-purple-400">📄</div>
+          <h3 class="text-xl font-bold mb-2">Guia de IA</h3>
+          <p class="text-sm mb-4">Introdução prática à inteligência artificial.</p>
+          <button class="w-full glow-button bg-purple-600 hover:bg-purple-700 py-2 rounded-md font-semibold">VER PDF</button>
+        </div>
+        <div class="curso-container glass rounded-xl p-5 text-white">
+          <div class="text-5xl mb-3 text-purple-400">📄</div>
+          <h3 class="text-xl font-bold mb-2">Manual PHP</h3>
+          <p class="text-sm mb-4">Tudo que você precisa para dominar PHP.</p>
+          <button class="w-full glow-button bg-purple-600 hover:bg-purple-700 py-2 rounded-md font-semibold">VER PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold mb-4">📞 ENTRE EM CONTATO</h2>
+      <div class="glass rounded-xl p-6 max-w-lg mx-auto">
+        <form id="contatoForm" class="space-y-4">
+          <input type="text" id="nome" placeholder="Seu nome" required class="w-full p-3 rounded-md bg-black bg-opacity-50 text-white focus:outline-none border border-purple-700 focus:border-cyan-500" />
+          <input type="email" id="email" placeholder="Seu email" required class="w-full p-3 rounded-md bg-black bg-opacity-50 text-white focus:outline-none border border-purple-700 focus:border-cyan-500" />
+          <textarea id="mensagem" rows="4" placeholder="Sua mensagem..." required class="w-full p-3 rounded-md bg-black bg-opacity-50 text-white focus:outline-none border border-purple-700 focus:border-cyan-500"></textarea>
+          <button type="submit" class="w-full glow-button bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-700 hover:to-cyan-500 py-3 rounded-md font-bold text-white transition">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function abrirEmail() {
+      const assunto = prompt("Assunto do email:");
+      const corpo = prompt("Escreva sua mensagem:");
+      if (assunto && corpo) {
+        const mailto = `mailto:ellenbaronebea@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+        window.location.href = mailto;
+      }
+    }
+
+    document.getElementById('contatoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !email || !mensagem) {
+        alert('Preencha todos os campos.');
+        return;
+      }
+
+      const assunto = `Contato via PRINTWEBCURSOS - ${nome}`;
+      const corpo = `Nome: ${nome}\nEmail: ${email}\n\nMensagem:\n${mensagem}`;
+      const mailtoLink = `mailto:ellenbaronebea@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>

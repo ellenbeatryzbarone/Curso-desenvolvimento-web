@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRINTWEBCURSOS - Login</title>
+  <script src="js/scripts.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .password-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #0bc5ea;
+      user-select: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .toggle-password:hover {
+      color: #35d2f7;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-indigo-900 to-purple-900 text-white min-h-screen flex flex-col items-center">
+
+  <!-- BARRA FIXA -->
+  <header class="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-white text-2xl font-extrabold flex items-center gap-2 select-none">
+        <span class="text-yellow-400 text-3xl">⚡</span>
+        PRINTWEBCURSOS
+      </h1>
+      <nav class="flex space-x-6 text-white text-sm md:text-base">
+        <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
+        <button onclick="alert('Contato: (81) 98557-0450')" class="hover:text-blue-400 transition">Contato</button>
+        <button onclick="abrirEmail()" class="hover:text-blue-400 transition">Empresas</button>
+        <a href="painel/cursos.html" class="hover:text-blue-400 transition">Cursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="flex-grow flex items-center justify-center w-full pt-20 px-4">
+    <div class="glass-container bg-black bg-opacity-40 backdrop-blur-md rounded-2xl border border-white/20 shadow-lg max-w-md w-full p-8 flex flex-col gap-6">
+      <h1 class="text-white text-center text-2xl font-bold select-none flex justify-center items-center gap-2">
+        PRINTWEBCURSOS <span class="text-aqua-400 text-3xl drop-shadow-[0_0_6px_rgb(11,197,234)] select-none">⚡</span>
+      </h1>
+
+      <input id="usuario" type="text" placeholder="Usuário" autocomplete="username" aria-label="Usuário"
+        class="w-full rounded-lg bg-black bg-opacity-70 border border-white/30 placeholder-white/60 text-white py-3 px-4 focus:outline-none focus:ring-2 focus:ring-aqua-400" />
+      
+      <div class="password-wrapper">
+        <input id="senha" type="password" placeholder="Senha" autocomplete="current-password" aria-label="Senha"
+          class="w-full rounded-lg bg-black bg-opacity-70 border border-white/30 placeholder-white/60 text-white py-3 px-4 focus:outline-none focus:ring-2 focus:ring-aqua-400 pr-12" />
+        <span id="toggleSenha" class="toggle-password" aria-label="Mostrar ou ocultar senha" role="button" tabindex="0" title="Mostrar/ocultar senha">👁️</span>
+      </div>
+
+      <button onclick="login()" aria-label="Entrar no sistema"
+        class="bg-pink-600 hover:bg-pink-700 transition text-white font-semibold py-3 rounded-xl shadow-pink-500/50 shadow-lg select-none">
+        Entrar
+      </button>
+
+      <p class="text-center text-white/70 text-sm select-none">
+        Senha aluno: <strong class="text-pink-500">123456</strong> | educador: <strong class="text-pink-500">654321</strong>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    function abrirEmail() {
+      const assunto = prompt("Assunto do email:");
+      const corpo = prompt("Escreva sua mensagem:");
+      if (assunto && corpo) {
+        const mailto = `mailto:ellenbaronebea@gmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+        window.location.href = mailto;
+      }
+    }
+
+    // Alternar visibilidade da senha
+    const senhaInput = document.getElementById('senha');
+    const toggleSenha = document.getElementById('toggleSenha');
+
+    toggleSenha.addEventListener('click', () => {
+      if (senhaInput.type === 'password') {
+        senhaInput.type = 'text';
+        toggleSenha.textContent = '🙈';
+      } else {
+        senhaInput.type = 'password';
+        toggleSenha.textContent = '👁️';
+      }
+    });
+
+    toggleSenha.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleSenha.click();
+      }
+    });
+  </script>
+
+</body>
+</html>

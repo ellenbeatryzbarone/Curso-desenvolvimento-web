@@ -1,0 +1,5 @@
+[
+  { "titulo": "Curso de SQL Básico", "categoria": "sql" },
+  { "titulo": "Introdução à IA", "categoria": "ia" },
+  { "titulo": "PHP do Zero", "categoria": "php" }
+]
